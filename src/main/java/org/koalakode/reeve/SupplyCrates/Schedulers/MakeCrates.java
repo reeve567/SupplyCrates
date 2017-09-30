@@ -26,6 +26,6 @@ public class MakeCrates extends BukkitRunnable {
 
 	@Override
 	public void run() {
-		crates[i] = new Crate(i, CrateUtil.randLoc(mrborder),main);
+		crates[i] = new Crate(i, CrateUtil.randLoc(Default),main);
 	}
 }
