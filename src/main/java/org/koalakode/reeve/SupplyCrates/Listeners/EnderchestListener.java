@@ -50,8 +50,8 @@ public class EnderchestListener implements Listener {
 			final int midSize = 75;
 			final int outerBounds = 375;
 
-			double x = e.getClickedBlock().getX() - mrborder.getBlockX();
-			double z = e.getClickedBlock().getZ() - mrborder.getBlockZ();
+			double x = e.getClickedBlock().getX() - Default.getBlockX();
+			double z = e.getClickedBlock().getZ() - Default.getBlockZ();
 
 			if (((-outerBounds < x && x < -midSize) || (midSize < x && x < outerBounds)) || ((-outerBounds < z && z < -midSize) || (midSize < z && z < outerBounds))) {
 				e.setCancelled(true);

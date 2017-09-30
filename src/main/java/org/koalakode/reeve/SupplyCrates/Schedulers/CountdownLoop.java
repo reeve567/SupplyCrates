@@ -36,7 +36,7 @@ public class CountdownLoop extends BukkitRunnable {
 						                                       "https://camo" +
 						                                                                                                                              ".githubusercontent" +
 						                                                                                                                              ".com/a4e336d9971686ae5698d2a39011e8e499a82475/68747470733a2f2f6a6172692e6c6f6c2f5a6e4e305451654d6d692e706e67");
-				temmie.sendMessage(dm);
+				//temmie.sendMessage(dm);
 
 
 				Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSP&8&l] &cSupplyCrates have been dropped in the Warzone go get them quick!"));
@@ -48,7 +48,7 @@ public class CountdownLoop extends BukkitRunnable {
 			else {
 				DiscordMessage dm1 = new DiscordMessage("Crates Notifications"," » Crates are gone!\nCrates will be dropped in 30 mins!", "https://camo.githubusercontent" +
 				".com/a4e336d9971686ae5698d2a39011e8e499a82475/68747470733a2f2f6a6172692e6c6f6c2f5a6e4e305451654d6d692e706e67");
-				temmie.sendMessage(dm1);
+				//temmie.sendMessage(dm1);
 
 
 				Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&',"&8&l[&4&lSP&8&l] &cSupplyCrates have been removed."));
