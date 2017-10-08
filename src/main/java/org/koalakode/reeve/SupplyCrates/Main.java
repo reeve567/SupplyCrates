@@ -89,11 +89,11 @@ public class Main extends JavaPlugin implements Listener {
 			Player sender = e.getPlayer();
 			if (e.getMessage().length() != 10 || !e.getPlayer().hasPermission("supplycrates.admin")) {
 				if (!CountdownLoop.broadcast) {
-					sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&8&l[&4&lSP&8&l] &cthere is &e" + CountdownLoop.time + "m&c until " +
+					sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&8&l[&4&lSPC&8&l] &cthere is &e" + CountdownLoop.time + "m&c until " +
 							                                                              "supplycrates removal."));
 				}
 				else {
-					sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&8&l[&4&lSP&8&l] &cthere is &e" + CountdownLoop.time + "m&c until " +
+					sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&8&l[&4&lSPC&8&l] &cthere is &e" + CountdownLoop.time + "m&c until " +
 							                                                              "supplycrates are dropped."));
 				}
 			}

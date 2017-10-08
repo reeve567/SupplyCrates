@@ -15,7 +15,7 @@ public class MakeCrates extends BukkitRunnable {
 
 	private Crate[] crates;
 	public Location mrborder = new Location(Bukkit.getWorld("world"),-499,80,-2611);
-	public Location Default = new Location(Bukkit.getWorld("world"),0,0,0);
+	public Location Default = new Location(Bukkit.getWorld("asdf"),0,0,0);
 	private int i;
 
 	MakeCrates(Crate[] crates,int i,JavaPlugin main) {

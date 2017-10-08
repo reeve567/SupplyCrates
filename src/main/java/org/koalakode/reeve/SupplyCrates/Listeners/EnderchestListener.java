@@ -33,7 +33,7 @@ public class EnderchestListener implements Listener {
 	private Economy economy;
 	private Crate[] crates;
 	public Location mrborder = new Location(Bukkit.getWorld("world"),-499,80,-2611);
-	public Location Default = new Location(Bukkit.getWorld("world"),0,0,0);
+	public Location Default = new Location(Bukkit.getWorld("asdf"),0,0,0);
 
 	EnderchestListener(Economy economy, Crate[] crates) {
 		this.crates = crates;
@@ -50,8 +50,8 @@ public class EnderchestListener implements Listener {
 			final int midSize = 75;
 			final int outerBounds = 375;
 
-			double x = e.getClickedBlock().getX() - Default.getBlockX();
-			double z = e.getClickedBlock().getZ() - Default.getBlockZ();
+			double x = e.getClickedBlock().getX() - mrborder.getBlockX();
+			double z = e.getClickedBlock().getZ() - mrborder.getBlockZ();
 
 			if (((-outerBounds < x && x < -midSize) || (midSize < x && x < outerBounds)) || ((-outerBounds < z && z < -midSize) || (midSize < z && z < outerBounds))) {
 				e.setCancelled(true);
@@ -109,13 +109,15 @@ public class EnderchestListener implements Listener {
 					player.openInventory(inv);
 				} else if (r <= (chance += Prizes.MYSTICALSOUL.getChance())) {
 					inv.addItem(Souls.MYSTICAL.getItem());
-					Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSP&8&l] &e" + player.getName() + "&c Has just got " +
+					Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSPC&8&l] &e" + player.getName() + "&c Has " +
+							                                                                                "just got " +
 							                                                                                "&5&l&oMysticial Soul&c In a Supply crate. Catch " +
 							                                                                                "them quickly!"));
 					player.openInventory(inv);
 				} else if (r <= (chance += Prizes.HYDROSOUL.getChance())) {
 					inv.addItem(Souls.HYDRO.getItem());
-					Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSP&8&l] &e" + player.getName() + "&c Has just got " +
+					Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSPC&8&l] &e" + player.getName() + "&c Has " +
+							                                                                                "just got " +
 							                                                                                "&1&l&oHydro Soul&c In a Supply crate. Catch them " +
 							                                                                                "quickly!"));
 					player.openInventory(inv);
@@ -124,23 +126,23 @@ public class EnderchestListener implements Listener {
 
 					if (l == 1) {
 						economy.depositPlayer(player, 5000);
-						player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSP&8&l] &cYou have gotten &e$5000!"));
+						player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSPC&8&l] &cYou have gotten &e$5000!"));
 					}
 					else if (l==2) {
 						economy.depositPlayer(player, 2500);
-						player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSP&8&l] &cYou have gotten &e$2500!"));
+						player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSPC&8&l] &cYou have gotten &e$2500!"));
 					}
 					else if (l==3) {
 						economy.depositPlayer(player, 1500);
-						player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSP&8&l] &cYou have gotten &e$1500!"));
+						player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSPC&8&l] &cYou have gotten &e$1500!"));
 					}
 					else if (l==4) {
 						economy.depositPlayer(player, 7500);
-						player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSP&8&l] &cYou have gotten &e$7500!"));
+						player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSPC&8&l] &cYou have gotten &e$7500!"));
 					}
 					else if (l==5) {
 						economy.depositPlayer(player, 10000);
-						player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSP&8&l] &cYou have gotten &e$10000!"));
+						player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSPC&8&l] &cYou have gotten &e$10000!"));
 					}
 
 				} else if (r <= chance + Prizes.GOLDENAPPLES.getChance()) {
@@ -161,12 +163,12 @@ public class EnderchestListener implements Listener {
 				}
 				if (left == 0) {
 					CountdownLoop.time = 0;
-					Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&',"&8&l[&4SP&8&l]&c All Supply Crates has been taken, " +
+					Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&',"&8&l[&4SPC&8&l]&c All Supply Crates has been taken, " +
 							                                                                               "another round of supply crates will " +
 							                                                                               "start in 30minutes!"));
 				}
 				else if (left%5 == 0) {
-					Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&',"&8&l[&4&lSP&8&l]&c There is &e" + left + "&c " +
+					Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&',"&8&l[&4&lSPC&8&l]&c There is &e" + left + "&c " +
 							                                                                               "supplycrates left in the warzone go get them" +
 							                                                                               " quick before they end!"));
 				}

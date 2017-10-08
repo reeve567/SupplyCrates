@@ -1,9 +1,9 @@
 main: org.koalakode.reeve.SupplyCrates.Main
 name: SupplyCrates
-version: 0.3
+version: 0.2
 softdepend: [HolographicDisplays]
 author: Xwy
-dependency: [CustomEnchants]
+dependency: [CustomEnchants,FBasics]
 website: http://koalakode.org
 commands:
-  spc:
+  sp:
