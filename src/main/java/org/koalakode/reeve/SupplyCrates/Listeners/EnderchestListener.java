@@ -32,8 +32,8 @@ public class EnderchestListener implements Listener {
 
 	private Economy economy;
 	private Crate[] crates;
-	public Location mrborder = new Location(Bukkit.getWorld("world"),-499,80,-2611);
-	public Location Default = new Location(Bukkit.getWorld("asdf"),0,0,0);
+	private Location mrborder = new Location(Bukkit.getWorld("world"),-499,80,-2611);
+	private Location Default = new Location(Bukkit.getWorld("asdf"),0,0,0);
 
 	EnderchestListener(Economy economy, Crate[] crates) {
 		this.crates = crates;
