@@ -9,7 +9,6 @@
     <version>0.1</version>
 
     <build>
-        <directory>C:\Users\reeve\Desktop\Test Server\plugins</directory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

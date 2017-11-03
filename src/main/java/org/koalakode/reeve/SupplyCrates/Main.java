@@ -46,7 +46,7 @@ public class Main extends JavaPlugin implements Listener {
 			setEnabled(false);
 		}
 
-		if (configCheck.Init() && eco != null) {
+		if (eco != null) {
 			new CountdownLoop(this).runTaskTimer(this,0,1200);
 
 			ListenerHandler listenerHandler = new ListenerHandler(this,eco, CountdownLoop.crates);

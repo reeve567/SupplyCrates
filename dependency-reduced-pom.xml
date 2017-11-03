@@ -5,7 +5,6 @@
   <artifactId>SupplyCrates</artifactId>
   <version>0.1</version>
   <build>
-    <directory>C:\Users\reeve\Desktop\Test Server\plugins</directory>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
