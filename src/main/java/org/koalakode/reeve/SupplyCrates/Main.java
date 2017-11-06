@@ -52,6 +52,11 @@ public class Main extends JavaPlugin implements Listener {
 			ListenerHandler listenerHandler = new ListenerHandler(this,eco, CountdownLoop.crates);
 			getServer().getPluginManager().registerEvents(this,this);
 			listenerHandler.Init();
+			int total = 0;
+			for (Prizes s: Prizes.values()) {
+				total += s.getChance();
+			}
+			Bukkit.broadcastMessage(String.valueOf(total));
 		}
 		else {
 			setEnabled(false);

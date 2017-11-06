@@ -1,6 +1,5 @@
 org\koalakode\reeve\SupplyCrates\Prizes.class
 org\koalakode\reeve\SupplyCrates\Schedulers\MakeCrates.class
-org\koalakode\reeve\SupplyCrates\Events\PlayerOpenCrateEvent.class
 org\koalakode\reeve\SupplyCrates\Listeners\EnderchestListener.class
 org\koalakode\reeve\SupplyCrates\Listeners\ListenerHandler.class
 org\koalakode\reeve\SupplyCrates\Main.class
