@@ -62,16 +62,13 @@ public class EnderchestListener implements Listener {
 				double chance = 0;
 				
 				double r = CrateUtil.getRandom(0, 99);
-				player.sendMessage(String.valueOf(r));
 				if (r <= (chance += Prizes.OBBY.getChance())) {
-					System.out.println("a");
 					int a = CrateUtil.getRandom(1, 3);
 					for (int i = 1; i <= a; i++) {
 						inv.addItem(new ItemStack(Material.OBSIDIAN, 64));
 					}
 					player.openInventory(inv);
 				} else if (r <= (chance += Prizes.PROTARMOR.getChance())) {
-					System.out.println("b");
 					int k = CrateUtil.getRandom(0, 3);
 					ItemStack[] list = new ItemStack[4];
 					
@@ -86,7 +83,6 @@ public class EnderchestListener implements Listener {
 					player.openInventory(inv);
 					
 				} else if (r <= (chance += Prizes.RANDCE.getChance())) {
-					System.out.println("c");
 					CustomEnchants C;
 					ArrayList<CustomEnchants> ce = new ArrayList<CustomEnchants>();
 					for (CustomEnchants c : CustomEnchants.values()) {
@@ -103,7 +99,6 @@ public class EnderchestListener implements Listener {
 					player.openInventory(inv);
 					
 				} else if (r <= (chance += Prizes.RANDENCH.getChance())) {
-					System.out.println("d");
 					Enchantment randEnchant;
 					int lvl;
 					do {
@@ -122,19 +117,15 @@ public class EnderchestListener implements Listener {
 					
 					
 				} else if (r <= (chance += Prizes.COMMONSOUL.getChance())) {
-					System.out.println("e");
 					inv.addItem(Souls.COMMON.getItem());
 					player.openInventory(inv);
 				} else if (r <= (chance += Prizes.UNCOMMONSOUL.getChance())) {
-					System.out.println("f");
 					inv.addItem(Souls.UNCOMMON.getItem());
 					player.openInventory(inv);
 				} else if (r <= (chance += Prizes.RARESOUL.getChance())) {
-					System.out.println("g");
 					inv.addItem(Souls.RARE.getItem());
 					player.openInventory(inv);
 				} else if (r <= (chance += Prizes.MYSTICALSOUL.getChance())) {
-					System.out.println("h");
 					inv.addItem(Souls.MYSTICAL.getItem());
 					Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSPC&8&l] &e" + player.getName() + "&c Has " +
 							"just got " +
@@ -142,7 +133,6 @@ public class EnderchestListener implements Listener {
 							"them quickly!"));
 					player.openInventory(inv);
 				} else if (r <= (chance += Prizes.HYDROSOUL.getChance())) {
-					System.out.println("i");
 					inv.addItem(Souls.HYDRO.getItem());
 					Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&8&l[&4&lSPC&8&l] &e" + player.getName() + "&c Has " +
 							"just got " +
@@ -150,7 +140,6 @@ public class EnderchestListener implements Listener {
 							"quickly!"));
 					player.openInventory(inv);
 				} else if (r <= chance + Prizes.MONEY.getChance()) {
-					System.out.println("j");
 					int l = CrateUtil.getRandom(1, 5);
 					
 					if (l == 1) {
